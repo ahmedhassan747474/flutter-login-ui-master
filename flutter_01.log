@@ -1,0 +1,68 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter build bundle --target C:\Users\Ahmed\Desktop\New folder\flutter-login-ui-master\lib\main.dart --target-platform android-x86 --filesystem-scheme org-dartlang-root --track-widget-creation --depfile C:\Users\Ahmed\Desktop\New folder\flutter-login-ui-master\build\app\intermediates\flutter\debug\android-x86/snapshot_blob.bin.d --asset-dir C:\Users\Ahmed\Desktop\New folder\flutter-login-ui-master\build\app\intermediates\flutter\debug\android-x86/flutter_assets --debug
+
+## exception
+
+FileSystemException: FileSystemException: writeFrom failed, path = 'C:\Users\Ahmed\Desktop\New folder\flutter-login-ui-master\build\app\intermediates\flutter\debug\android-x86/flutter_assets\kernel_blob.bin' (OS Error: There is not enough space on the disk.
+, errno = 112)
+
+```
+#0      _RandomAccessFile.writeFrom.<anonymous closure> (dart:io/file_impl.dart:856:9)
+#1      _rootRunUnary (dart:async/zone.dart:1132:38)
+#2      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#3      _FutureListener.handleValue (dart:async/future_impl.dart:137:18)
+#4      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:678:45)
+#5      Future._propagateToListeners (dart:async/future_impl.dart:707:32)
+#6      Future._completeWithValue (dart:async/future_impl.dart:522:5)
+#7      Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:552:7)
+#8      _rootRun (dart:async/zone.dart:1124:13)
+#9      _CustomZone.run (dart:async/zone.dart:1021:19)
+#10     _CustomZone.runGuarded (dart:async/zone.dart:923:7)
+#11     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:963:23)
+#12     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#13     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#14     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:116:13)
+#15     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:173:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel unknown, v1.9.1+hotfix.6, on Microsoft Windows [Version 10.0.17134.165], locale en-US)
+    • Flutter version 1.9.1+hotfix.6 at C:\src\flutter
+    • Framework revision 68587a0916 (4 months ago), 2019-09-13 19:46:58 -0700
+    • Engine revision b863200c37
+    • Dart version 2.5.0
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.0)
+    • Android SDK at C:\Users\Ahmed\AppData\Local\Android\sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-29, build-tools 29.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+    • All Android licenses accepted.
+
+[✗] Visual Studio - develop for Windows
+    ✗ Visual Studio not installed; this is necessary for Windows development.
+      Download at https://visualstudio.microsoft.com/downloads/.
+
+[✓] Android Studio (version 3.5)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin version 41.1.2
+    • Dart plugin version 191.8593
+    • Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+
+[✓] IntelliJ IDEA Community Edition (version 2019.1)
+    • IntelliJ at C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2018.3.4
+    • Flutter plugin version 36.1.4
+    • Dart plugin version 191.7830
+
+[✓] Connected device (2 available)
+    • Android SDK built for x86 • emulator-5556 • android-x86 • Android 10 (API 29) (emulator)
+    • Windows                   • Windows       • windows-x64 • Microsoft Windows [Version 10.0.17134.165]
+
+! Doctor found issues in 1 category.
+```
